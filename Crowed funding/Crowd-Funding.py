@@ -61,6 +61,7 @@ def register():
             "mail":email,
             "password":password,
             "phone":"+20"+phone}
+    data=open("DataBase/users_table.txt","w") #you must manually create a DataBase Folder 
     while True:
         data=open("DataBase/users_table.txt","r") 
         if name in data.read():
@@ -189,6 +190,7 @@ def create_project(username,Id):
              "From "+start+" To "+end,
              "Total target: "+target+" EGP"]
     user_projects="User: "+username+" | "+"Project: "+str(project)
+    data=open("DataBase/projects_table.txt","w") #you must manually create a DataBase Folder 
     data=open("DataBase/projects_table.txt","a")
     data.write("-----------------------------------------------------------------------------------------------------------------------------------------")
     data.write("\n"+str(user_projects)+"\n")
