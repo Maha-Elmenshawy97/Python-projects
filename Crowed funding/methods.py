@@ -46,7 +46,7 @@ def donation(donar,project):
                         break
                     except ValueError:
                         print("The amont must be number!")
-       
+             db=open("DataBase/donations_table.txt","w") #you must manually create a DataBase Folder
             db=open("DataBase/donations_table.txt","a")
             db.write("----------------------------------------------------------------------------")
             db.write("\nDonar_name: "+donar+" | Donation_amount: "+amount+" EGP |Project: "+project+"\n")
