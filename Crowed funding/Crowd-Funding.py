@@ -271,7 +271,7 @@ def profile(username):
                     else:
                         with open("DataBase/projects_table.txt","r") as pro:
                             for line in pro.readlines():
-                                if "-------" not in line:
+                                if "------" not in line:
                                     if num in line.split("|")[1].split(",")[0].split(":")[2].split("'")[0].split(" ")[1]:
                                         delete_project(line)
                                         print("Deleting project number"+num+"......")
